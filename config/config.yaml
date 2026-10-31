@@ -1,0 +1,13 @@
+# Update these values for your test environment.
+base_url: "https://safety-demo.teexponent.com"
+login_path: "/auth/login"
+dashboard_path: "/dashboard"
+
+# Prefer environment variables for credentials:
+# Windows PowerShell:
+#   $env:SAFETY_EMAIL="your-email"
+#   $env:SAFETY_PASSWORD="your-password"
+email_env: "SAFETY_EMAIL"
+password_env: "SAFETY_PASSWORD"
+
+explicit_wait: 15
