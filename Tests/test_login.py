@@ -41,7 +41,7 @@ class TestLogin:
 
     @pytest.mark.smoke
     def test_valid_login(self, login_page):
-        if not EMAIL or not PASSWORD:
-            pytest.skip("Set SAFETY_EMAIL and SAFETY_PASSWORD environment variables.")
+     ##   if not EMAIL or not PASSWORD:
+       ##     pytest.skip("Set SAFETY_EMAIL and SAFETY_PASSWORD environment variables.")
         login_page.login(EMAIL, PASSWORD)
         assert login_page.is_login_successful(), "Dashboard was not displayed."
