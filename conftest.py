@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture
 def driver():
     options = Options()
-    if os.getenv(CI):
+    if os.getenv("CI"):
         options.add_argument("--headless=new")
         options.add_argument("--window-size=1920,1080")
 
