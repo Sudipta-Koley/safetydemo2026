@@ -11,7 +11,7 @@ def driver():
         options.add_argument("--headless=new")
         options.add_argument("--window-size=1920,1080")
 
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.chrome(options=options)
     browser.maximize_window()
     yield browser
     browser.quit()
