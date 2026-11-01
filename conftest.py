@@ -7,11 +7,11 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture
 def driver():
     options = Options()
-    if os.getenv("HEADLESS", "0") == "1":
+    if os.getenv(CI):
         options.add_argument("--headless=new")
         options.add_argument("--window-size=1920,1080")
 
-    browser = webdriver.chrome(options=options)
-    browser.maximize_window()
-    yield browser
-    browser.quit()
+    driver = webdriver.chrome(options=options)
+    driver.maximize_window()
+    yield driver
+    driver.quit()
